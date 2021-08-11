@@ -44,6 +44,7 @@ Use the copy function below to do the following:
   1. receive an array as a parameter - you will pass in originalFlavors as an argument when the function is invoked.
   2. Return a copy of the received array  
 */
+
 function copy(array){
   [...array];
 return array;
@@ -64,14 +65,12 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-// adding an array as a parameter
 function is31Flavors(array){
 if(array.length === 31){
   return true;
 }else(array.length != 31);{
   return false;
 }
-  //  conditional - if array.length is 31 return true else return false
 }
 
 console.log('Task 2 =', is31Flavors(originalFlavors))
@@ -88,9 +87,8 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-// 2 parameters - array, string
 function addFlavor(array, string){
-originalFlavors.unshift(string);{
+array.unshift(string);{
   return array;
 }
 //  use unshift to add the string to the front of the array and return the array
@@ -108,13 +106,13 @@ Use the removeLastFlavor function below to do the following:
 
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-// paramater - array
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
-//  use .pop to remove the last item and return array
+
+function removeLastFlavor(array){
+array.pop();
+return array;
 }
 
-
+console.log('Task 4 =', removeLastFlavor(originalFlavors))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -126,12 +124,12 @@ Use the getFlavorByIndex function below to do the following:
 
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
-// recieve paramater - array, index (number)
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
-  // return the array[index]
+
+function getFlavorByIndex(array, i){
+return array[i];
 }
 
+console.log('Task 5 =', getFlavorByIndex(originalFlavors, 0))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
