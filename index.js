@@ -91,7 +91,6 @@ function addFlavor(array, string){
 array.unshift(string);{
   return array;
 }
-//  use unshift to add the string to the front of the array and return the array
 }
 
 console.log('Task 3 =', addFlavor(originalFlavors, 'Chocolate Rain'))
@@ -146,15 +145,20 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 // 2 parameters - array, string
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(array, string){
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === string){
+      array.splice(i, 1);
+    }
+  }
   // loop through the array and check each index for the string
   // conditional that checks for an exact match ===
   // if the item matches the string remove the item at that specific index .splice - index (1) and the number of items to delete
   /*your code here*/
-  
+  return array;
 }
-// 
 
+console.log('Task 6 =', removeFlavorByName(originalFlavors, 'Chocolate Rain'))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
